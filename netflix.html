@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="n-style.css">
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <a href="netflix.html"><img src="netflix-img/images/logo.png" class="logo"></a>
+            <div>
+                <select class="languagebtn">
+                    <option>English&nbsp&nbsp&nbsp</option>
+                    <option>Filipino&nbsp&nbsp&nbsp</option>
+                </select>
+                <a href="netflix_login.html"><button class="signup">Sign In</button></a>
+            </div>
+        </nav>
+        <div class="middle">
+            <h1 class="title1">Unlimited movies, TV <br>shows, and more</h1>
+            <h3 class="title2">Starts at ₱149. Cancel anytime.</h3>
+            <h5 class="title3">Ready to watch? Enter your email to create or restart your membership.</h5>
+            
+        </div>
+        <form class="sign-up">
+            <div class="email-container">
+                <input type="email" id="email" class="email-input" placeholder=" " required>
+                <label for="email" class="email-label">Email address</label>
+            </div>
+            <button type="submit" class="get-started-btn">Get Started</button>
+        </form>
+        <div class="divider">
+            <img src="netflix-img/images/divider.png" alt="Divider">
+        </div>
+    </div>
+    
+    
+    
+    <div class="container">
+        <div class="trending">
+            <h2>Trending Now</h2>
+        </div>
+        <button class="scroll-btn left" id="leftArrow">
+            <span class="arrow-icon">&#10094;</span>
+        </button>
+        <div class="movie-row" id="movieRow">
+            <img src="netflix-img/trending/trending1.png" alt="Squid Game" 
+    onclick="openPopup('2024', '16+', ['Show', 'Thrillers', 'Dramas'], 
+    'Hundreds of cash-strapped players accept a strange invitation to compete in children\'s games. Inside, a tempting prize awaits — with deadly high stakes.', 
+    'netflix-img/trending/poster1.jpg')">
+
+            <img src="netflix-img/trending/trending2.png" alt="Incognito"
+            onclick="openPopup('2025', '16+', ['Show', 'Action', 'Dramas'], 
+    'In search of redemption, a crew of misfits joins a private military company on a series of deadly missions against the criminal underworld.', 
+    'netflix-img/trending/poster2.jpg')">
+
+            <img src="netflix-img/trending/trending3.png" alt="Back in Action"
+            onclick="openPopup('2025', '13+', ['Movie', 'Comedies', 'Action'], 
+    'Fifteen years after vanishing from the CIA to start a family, elite spies Matt and Emily jump back into the world of espionage when their cover is blown.', 
+    'netflix-img/trending/poster3.jpg')">
+
+            <img src="netflix-img/trending/trending4.png" alt="Un/Happy for you"
+            onclick="openPopup('2024', '13+', ['Movie', 'Romance', 'Dramas'], 
+    'When his ex suddenly shows up in town, a chef plots to get even with her for leaving him — but might just end up trying to win her back.', 
+    'netflix-img/trending/poster4.jpg')">
+
+            <img src="netflix-img/trending/trending5.png" alt="Sakamoto Days"
+            onclick="openPopup('2025', '16+', ['Show', 'Comedies', 'Action', 'Anime'], 
+    'Once the greatest hitman of all, Taro Sakamoto retired in the name of love. But when his past catches up, he must fight to protect his beloved family.', 
+    'netflix-img/trending/poster5.jpg')">
+
+            <img src="netflix-img/trending/trending6.png" alt="XO. Kitty"
+            onclick="openPopup('2025', '13+', ['Show', 'Comedies','Romance', 'Dramas'], 
+    'Following her heart to an elite high school in Seoul, teen matchmaker Kitty learns that life, love and family are more complicated than she ever imagined.', 
+    'netflix-img/trending/poster6.jpg')">
+
+            <img src="netflix-img/trending/trending7.png" alt="Lavender Fields"
+            onclick="openPopup('2024', '13+', ['Show', 'Action', 'Dramas'], 
+    'Jasmin loved her idyllic life in her mountain town, but a brush with a criminal empire took it all away. Now she\'s out for revenge with a new identity.', 
+    'netflix-img/trending/poster7.jpg')">
+
+            <img src="netflix-img/trending/trending8.png" alt="Solo Leveling"
+            onclick="openPopup('2025', '16+', ['Show', 'Action', 'Anime', 'Fantasy'], 
+    'Following an incident, low-ranked hunter Sung Jinwoo acquires a unique \'level up\' power —can he tackle obstacles and rise from being the weakest?', 
+    'netflix-img/trending/poster8.jpg')">
+
+            <img src="netflix-img/trending/trending9.png" alt="Single Inferno"
+            onclick="openPopup('2025', '13+', ['Show', 'Reality Programming'], 
+    'Stranded and ready to mingle, flirty singles search for love on a deserted island they can only escape as couples for romantic date nights in paradise.', 
+    'netflix-img/trending/poster9.jpg')">
+
+            <img src="netflix-img/trending/trending10.png" alt="MEG2: The Trench"
+            onclick="openPopup('2023', '13+', ['Movie', 'Action', 'Sci-fi'], 
+    'In the ocean\'s darkest depths, researchers fight for survival against massive prehistoric sea creatures and an equally predatory mining operation.', 
+    'netflix-img/trending/poster10.jpg')">
+        </div>
+        <button class="scroll-btn right" id="rightArrow">
+            <span class="arrow-icon">&#10095;</span>
+        </button>
+    </div>
+
+    <div id="moviePopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <img id="popupImage" src="" alt="Movie Poster">
+            <div class="tags" id="popupTags"></div>
+            <p id="popupDescription"></p>
+            <button class="get-started-btn">Get Started</button>
+        </div>
+    </div>
+    <div class="reasons">
+        <h2>More Reasons to Join</h2>
+        <form>
+            <div class="box1">
+                <h3>Enjoy on your TV</h3>
+                <h4>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h4>
+                <img class="computer" src="netflix-img/reasonstojoin/computer.png">
+            </div>
+            <div class="box2">
+                <h3>Download your shows to watch offline</h3>
+                <h4>Save your favorites easily and always have something to watch.</h4>
+                <img class="arrowdown" src="netflix-img/reasonstojoin/arrowdown.png">
+            </div>
+            <div class="box3">
+                <h3>Watch everywhere</h3>
+                <h4>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</h4>
+                <img class="telescope" src="netflix-img/reasonstojoin/telescope.png">
+            </div>
+            <div class="box4">
+                <h3>Create profiles for kids</h3>
+                <h4>Send kids on adventures with their favorite characters in a space made just for them — free with your membership.</h4>
+                <img class="happy" src="netflix-img/reasonstojoin/happyhappy.png">
+            </div>
+        </form>
+    </div>
+
+    <div class="faq-container">
+        <br>
+        <h2>Frequently Asked Questions</h2>
+    
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What is Netflix?</span>
+                <span class="faq-icon">&#43;</span>
+            </div>
+            <div class="faq-answer">
+                Netflix is a streaming service that offers a wide variety of award-winning TV shows, 
+                movies, anime, documentaries, and more on thousands of internet-connected devices.
+                <br><br>
+                You can watch as much as you want, whenever you want without a single commercial – all 
+                for one low monthly price. There's always something new to discover and new TV shows and 
+                movies are added every week!
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>How much does Netflix cost?</span>
+                <span class="faq-icon">&#43;</span>
+            </div>
+            <div class="faq-answer">
+                Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₱149 to ₱549 a month. No extra costs, no contracts.
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Where can I watch?</span>
+                <span class="faq-icon">&#43;</span>
+            </div>
+            <div class="faq-answer">
+                Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+                <br><br>
+                You can also download your favorite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>How do I cancel?</span>
+                <span class="faq-icon">&#43;</span>
+            </div>
+            <div class="faq-answer">
+                Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What can I watch on Netflix?</span>
+                <span class="faq-icon">&#43;</span>
+            </div>
+            <div class="faq-answer">
+                Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Is Netflix good for kids?</span>
+                <span class="faq-icon">&#43;</span>
+            </div>
+            <div class="faq-answer">
+                The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.
+                <br><br>
+                Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.
+            </div>
+        </div>
+    </div>
+
+
+    <div class="middle1">
+        <h5 class="title3">Ready to watch? Enter your email to create or restart your membership.</h5>
+        <form class="sign-up">
+
+            <div class="email-container">
+                <input type="email" id="email" class="email-input" placeholder=" " required>
+                <label for="email" class="email-label">Email address</label>
+            </div>
+            <button type="submit" class="get-started-btn">Get Started</button>
+        </form>
+        </div>
+
+
+        <footer class="footer">
+            <p class="footer-contact"><a href="#">Questions? Contact us.</a></p>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <a href="#">FAQ</a>
+                    <a href="#">Investor Relations</a>
+                    <a href="#">Ways to Watch</a>
+                    <a href="#">Corporate Information</a>
+                    <a href="#">Only on Netflix</a>
+                </div>
+                <div class="footer-column">
+                    <a href="#">Help Center</a>
+                    <a href="#">Jobs</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="footer-column">
+                    <a href="#">Account</a>
+                    <a href="#">Redeem Gift Cards</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Speed Test</a>
+                </div>
+                <div class="footer-column">
+                    <a href="#">Media Center</a>
+                    <a href="#">Buy Gift Cards</a>
+                    <a href="#">Cookie Preferences</a>
+                    <a href="#">Legal Notices</a>
+                </div>
+            </div>
+        
+            <div class="footer-lang">
+                <button class="footer-lang-btn" onclick="toggleLanguageDropdown()">
+                    文A English <span>▼</span>
+                </button>
+            
+                <div id="languageDropdown" class="dropdown-menu">
+                    <div class="dropdown-item" onclick="setLanguage('English')">English</div>
+                    <div class="dropdown-item" onclick="setLanguage('Filipino')">Filipino</div>
+                </div>
+            </div>
+            
+        
+            <p class="footer-country">Netflix Philippines</p>
+        </footer>
+        
+</body>
+
+    <script>
+        const movieRow = document.getElementById('movieRow');
+        const leftArrow = document.getElementById('leftArrow');
+        const rightArrow = document.getElementById('rightArrow');
+
+        // Function to check scroll position
+        function checkScroll() {
+            if (movieRow.scrollLeft > 0) {
+                leftArrow.style.display = 'block';
+            } else {
+                leftArrow.style.display = 'none';
+            }
+
+            if (movieRow.scrollLeft + movieRow.clientWidth < movieRow.scrollWidth) {
+                rightArrow.style.display = 'block';
+            } else {
+                rightArrow.style.display = 'none';
+            }
+        }
+
+        // Scroll left function
+        leftArrow.addEventListener('click', () => {
+            movieRow.scrollBy({
+                left: -300,
+                behavior: 'smooth'
+            });
+        });
+
+        // Scroll right function
+        rightArrow.addEventListener('click', () => {
+            movieRow.scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            });
+        });
+
+        // Event listener to track scroll position and toggle arrows
+        movieRow.addEventListener('scroll', checkScroll);
+        window.addEventListener('resize', checkScroll);
+
+        // Initial check on page load
+        checkScroll();
+       
+        function openPopup(year, rating, genres, description, imageSrc) {
+        document.getElementById('popupYear')?.remove(); 
+        document.getElementById('popupRating')?.remove(); 
+
+        const tagsContainer = document.getElementById('popupTags');
+        tagsContainer.innerHTML = '';
+
+        // Add year and rating dynamically
+        const yearTag = document.createElement('span');
+        yearTag.classList.add('tag');
+        yearTag.id = 'popupYear';
+        yearTag.innerText = year;
+        tagsContainer.appendChild(yearTag);
+
+        const ratingTag = document.createElement('span');
+        ratingTag.classList.add('tag');
+        ratingTag.id = 'popupRating';
+        ratingTag.innerText = rating;
+        tagsContainer.appendChild(ratingTag);
+
+        // Add genres dynamically
+        genres.forEach(genre => {
+            let genreTag = document.createElement('span');
+            genreTag.classList.add('tag');
+            genreTag.innerText = genre;
+            tagsContainer.appendChild(genreTag);
+        });
+
+        document.getElementById('popupDescription').innerText = description;
+        document.getElementById('popupImage').src = imageSrc;
+
+        document.getElementById('moviePopup').style.display = 'flex';
+    }
+
+    function closePopup() {
+        document.getElementById('moviePopup').style.display = 'none';
+    }
+
+    // Close popup when clicking outside
+    window.onclick = function(event) {
+        let popup = document.getElementById('moviePopup');
+        if (event.target == popup) {
+            popup.style.display = 'none';
+        }
+    };
+
+    function toggleFAQ(element) {
+        const parent = element.parentElement;
+        const icon = element.querySelector(".faq-icon");
+
+        // Toggle active class
+        parent.classList.toggle("active");
+
+        // Change the icon from '+' to '×'
+        if (parent.classList.contains("active")) {
+            icon.innerHTML = "&#10005;";  // Unicode for '×'
+        } else {
+            icon.innerHTML = "&#43;";  // Unicode for '+'
+        }
+    }
+    function toggleLanguageDropdown() {
+        const dropdown = document.getElementById('languageDropdown');
+        
+        // Toggle dropdown visibility
+        dropdown.classList.toggle('active');
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!dropdown.contains(event.target) && !event.target.classList.contains('footer-lang-btn')) {
+                dropdown.classList.remove('active');
+            }
+        }, { once: true });
+    }
+
+    function setLanguage(language) {
+        document.querySelector(".footer-lang-btn").innerHTML = `文A ${language} <span>▼</span>`;
+        document.getElementById('languageDropdown').classList.remove('active');
+    }
+    </script>
+
+</html>
